@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
   "test": "mocha --require ts-node/register test/**/*.test.ts --reporter allure-mocha",
-  "report:generate": "allure generate allure-results --clean",
-  "report:serve": "allure serve allure-results"
+  "report:generate": "allure generate allure-results --clean -o allure-report",
+  "report:serve": "allure serve allure-results",
+  "report:pdf": "allure-pdf --report-dir allure-report --output allure-report.pdf"
 },
   "keywords": [],
   "author": "",
